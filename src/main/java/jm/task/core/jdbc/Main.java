@@ -2,6 +2,7 @@ package jm.task.core.jdbc;
 
 import jm.task.core.jdbc.service.UserService;
 import jm.task.core.jdbc.service.UserServiceImpl;
+import org.hibernate.event.spi.SaveOrUpdateEvent;
 
 public class Main {
     public static void main(String[] args) {
@@ -23,5 +24,12 @@ public class Main {
 
         System.out.println("Все пользователи в базе:");
         userService.getAllUsers().forEach(System.out::println);
+
+
+        userService.cleanUsersTable();
+        System.out.println("ЧИСТКА ТАБЛИЦЫ");
+
+        userService.dropUsersTable();
+        System.out.println("Удаление таблицы");
     }
 }

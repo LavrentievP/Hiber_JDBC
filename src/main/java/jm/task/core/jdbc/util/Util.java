@@ -11,9 +11,9 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class Util {
-    private static final String URL = "jdbc:postgresql://localhost:5434/Pavel_L";
-    private static final String USER = "user";
-    private static final String PASSWORD = "1234";
+    private static final String URL = "jdbc:postgresql://localhost:5434/postgres";
+    private static final String USER = "myuser";
+    private static final String PASSWORD = "mysecretpassword";
 
     private static SessionFactory sessionFactory;
 
