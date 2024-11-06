@@ -9,7 +9,6 @@ public class Main {
 
         userService.createUsersTable();
 
-
         userService.saveUser("Ivan", "Ivanov", (byte) 25);
         System.out.println("User с именем Ivan добавлен в базу данных");
 
@@ -22,18 +21,7 @@ public class Main {
         userService.saveUser("Vladimir", "Kojemiaka", (byte) 45);
         System.out.println("User с именем Vladimir добавлен в базу данных");
 
-
         System.out.println("Все пользователи в базе:");
         userService.getAllUsers().forEach(System.out::println);
-
-
-//        userService.cleanUsersTable();
-//        System.out.println("чистка таблицы");
-
-
-//        userService.dropUsersTable();
-//        System.out.println("удаление таблицы");
-
-
     }
 }
